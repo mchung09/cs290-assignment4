@@ -60,27 +60,27 @@ else if($maxMultiplier == NULL) {
 }
 else {}
 
-if(is_int($minMultiplicand)) {
+if(is_int($minMultiplicand) || $minMultiplicand < 0) {
 	echo "<script type='text/javascript'>
-             alert('Invalid input. Minimum multiplicand must be an integer.');
+             alert('Invalid input. Minimum multiplicand must be a positive integer.');
          </script>";
     die();
 }
-else if(is_int($maxMultiplicand)) {
+else if(is_int($maxMultiplicand) || $maxMultiplicand < 0) {
 	echo "<script type='text/javascript'>
-             alert('Invalid input. Maximum multiplicand must be an integer.');
+             alert('Invalid input. Maximum multiplicand must be a positive integer.');
          </script>";
     die();
 }
-else if(is_int($minMultiplier)) {
+else if(is_int($minMultiplier) || $minMultiplier < 0) {
 	echo "<script type='text/javascript'>
-             alert('Invalid input. Minimum multiplier must be an integer.');
+             alert('Invalid input. Minimum multiplier must be a positive integer.');
          </script>";
     die();
 }
-else if(is_int($maxMultiplier)) {
+else if(is_int($maxMultiplier) || $maxMultiplier < 0) {
 	echo "<script type='text/javascript'>
-             alert('Invalid input. Maximum multiplier must be an integer.');
+             alert('Invalid input. Maximum multiplier must be a positive integer.');
          </script>";
     die();
 }
